@@ -7,7 +7,8 @@ If you have some **NVIDIA GPUs**, I suggest to use [datascience-notebook-gpu](ht
 
 ## Requirements
 ```
-direnv>=2.15.*
+docker==19.03.*
+direnv==2.15.*
 ```
 
 ## Included Python Packages
