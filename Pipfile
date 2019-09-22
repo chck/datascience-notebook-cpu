@@ -8,6 +8,11 @@ verify_ssl = true
 [packages]
 jupyterlab = "*"
 ipywidgets = "*"
+tensorflow = "*"
+tqdm = "*"
+pandas = "*"
+matplotlib = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.7"
