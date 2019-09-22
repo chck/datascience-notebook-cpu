@@ -22,10 +22,10 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Japanese Tokenizer: mecab-ipadic-neologd
-#RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git /tmp/neologd && \
-#    /tmp/neologd/bin/install-mecab-ipadic-neologd -n -u -y && \
-#    rm -rf /tmp/neologd
-#ENV MECAB_DICDIR="/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd"
+RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git /tmp/neologd && \
+    /tmp/neologd/bin/install-mecab-ipadic-neologd -n -u -y && \
+    rm -rf /tmp/neologd
+ENV MECAB_DICDIR="/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd"
 
 # Install python dependencies via Pipenv
 WORKDIR /notebooks
