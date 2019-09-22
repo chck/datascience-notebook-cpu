@@ -17,7 +17,7 @@ https://github.com/chck/datascience-notebook-cpu/blob/master/Pipfile
 
 ### Pull image
 ```
-docker pull chck/datascience-notebook-cpu:python37
+docker pull chck/datascience-notebook-cpu
 ```
 
 ### Generate hashed password
