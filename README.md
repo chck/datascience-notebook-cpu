@@ -3,6 +3,8 @@ Ready-to-run Docker images containing JupyterLab on **CPU**
 
 [![dockeri.co](https://dockeri.co/image/chck/datascience-notebook-cpu)](https://hub.docker.com/r/chck/datascience-notebook-cpu)
 
+If you have some **NVIDIA GPUs**, I suggest to use [datascience-notebook-gpu](https://hub.docker.com/r/chck/datascience-notebook-gpu) instead of this.
+
 ## Requirements
 ```
 direnv>=2.15.*
