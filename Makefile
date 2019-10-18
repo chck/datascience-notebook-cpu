@@ -2,6 +2,7 @@ NAME:=chck/datascience-notebook-cpu
 TAG:=python37
 IMAGE:=$(NAME):$(TAG)
 LATEST:=$(NAME):latest
+_:=$(shell direnv allow)
 
 .PHONY: all
 all: help

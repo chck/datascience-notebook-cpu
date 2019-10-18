@@ -13,6 +13,10 @@ tqdm = "*"
 pandas = "*"
 matplotlib = "*"
 seaborn = "*"
+requests = "*"
+google-cloud = "*"
+google-cloud-bigquery = "*"
+joblib = "*"
 
 [requires]
 python_version = "3.7"
