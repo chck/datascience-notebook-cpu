@@ -21,6 +21,7 @@ mecab-python3 = "*"
 mojimoji = "*"
 scikit-learn = "*"
 gensim = "*"
+notify-run = "*"
 
 [requires]
 python_version = "3.7"
