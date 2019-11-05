@@ -19,6 +19,8 @@ google-cloud-bigquery = "*"
 joblib = "*"
 mecab-python3 = "*"
 mojimoji = "*"
+scikit-learn = "*"
+gensim = "*"
 
 [requires]
 python_version = "3.7"
