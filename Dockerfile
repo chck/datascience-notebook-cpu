@@ -27,12 +27,12 @@ RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git /tmp
     rm -rf /tmp/neologd
 ENV MECAB_DICDIR="/usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd"
 
-# Install python dependencies via Pipenv
+# Install Python Dependencies via Pipenv
 WORKDIR /notebooks
 COPY . /notebooks
 RUN pipenv install --system --ignore-pipfile --deploy
 
-# Setup jupyterlab dependencies
+# Setup JupyterLab Dependencies
 RUN jupyter serverextension enable --py jupyterlab && \
     jupyter notebook --generate-config && \
     sed -i -e "s/#c.NotebookApp.ip = 'localhost'/c.NotebookApp.ip = '0.0.0.0'/g" ~/.jupyter/jupyter_notebook_config.py && \
