@@ -23,6 +23,7 @@ scikit-learn = "*"
 gensim = "*"
 notify-run = "*"
 wordcloud = "*"
+plotly = "*"
 
 [requires]
 python_version = "3.7"

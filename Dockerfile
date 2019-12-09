@@ -33,11 +33,16 @@ COPY . /notebooks
 RUN pipenv install --system --ignore-pipfile --deploy
 
 # Setup JupyterLab Dependencies
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 RUN jupyter serverextension enable --py jupyterlab && \
     jupyter notebook --generate-config && \
     sed -i -e "s/#c.NotebookApp.ip = 'localhost'/c.NotebookApp.ip = '0.0.0.0'/g" ~/.jupyter/jupyter_notebook_config.py && \
-    jupyter labextension install @jupyter-widgets/jupyterlab-manager && \
-    jupyter nbextension enable --py widgetsnbextension
+    jupyter labextension install @jupyter-widgets/jupyterlab-manager --no-build && \
+    jupyter labextension install jupyterlab-plotly --no-build && \
+    jupyter labextension install plotlywidget --no-build && \
+    jupyter lab build && \
+    jupyter nbextension enable --py widgetsnbextension && \
+    unset NODE_OPTIONS
 
 EXPOSE 8888
 
